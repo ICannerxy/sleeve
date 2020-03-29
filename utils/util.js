@@ -1,19 +1,29 @@
-const formatTime = date => {
-  const year = date.getFullYear()
-  const month = date.getMonth() + 1
-  const day = date.getDate()
-  const hour = date.getHours()
-  const minute = date.getMinutes()
-  const second = date.getSeconds()
+/**
+ * @auth icanner
+ * @date 2020/3/29 8:52 下午
+ */
 
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-}
+/**
+ * promisic封装ajax
+ * @param func
+ * @returns {function(*=): Promise<any>}
+ */
+const promisic = function (func) {
+    return function (params = {}) {
+        return new Promise((resolve, reject) => {
+            const args = Object.assign(params, {
+                success: (res) => {
+                    resolve(res);
+                },
+                fail: (error) => {
+                    reject(error);
+                }
+            });
+            func(args);
+        });
+    };
+};
 
-const formatNumber = n => {
-  n = n.toString()
-  return n[1] ? n : '0' + n
-}
-
-module.exports = {
-  formatTime: formatTime
+export {
+    promisic
 }
