@@ -1,0 +1,22 @@
+{
+  "name": "sleeve",
+  "version": "0.1.0",
+  "description": "林间有风电商小程序",
+  "main": "app.js",
+  "dependencies": {
+    "lin-ui": "~0.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ICannerxy/sleeve.git"
+  },
+  "author": "icanner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ICannerxy/sleeve/issues"
+  },
+  "homepage": "https://github.com/ICannerxy/sleeve#readme"
+}
