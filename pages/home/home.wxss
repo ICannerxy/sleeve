@@ -3,6 +3,7 @@
 .top-theme {
     width: 100%;
     height: 260rpx;
+    display: flex;
 }
 
         .swiper {
@@ -14,4 +15,5 @@
             margin-top: 20rpx;
             width: 100%;
             height: 310rpx;
+            display: flex;
         }
