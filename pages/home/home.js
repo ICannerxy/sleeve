@@ -33,12 +33,9 @@ Page({
      */
     async initData() {
         const theme = new Theme();
-        await theme.getThemes();
-        console.log(theme)
-        const themeA = theme.getHomeLoactionA();
-        console.log(themeA)
+        await theme.getAllThemes();
+        const themeA = theme.getHomeLocationA();
         const themeE = theme.getHomeLocationE();
-
         const bannerB = await Banner.getHomeLocationB();
         const grid = await Category.getHomeLocationC();
         const activityD = await Activity.getHomeLocationD();

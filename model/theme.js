@@ -8,7 +8,12 @@ class Theme {
 
     themes = []
 
-    async getThemes() {
+    /**
+     * 获取所有主题
+     *
+     * @returns {Promise<void>}
+     */
+    async getAllThemes() {
         const names = `${Theme.locationA},${Theme.locationE},${Theme.locationF},${Theme.locationH}`
         this.themes = await Http.request({
             url: `theme/by/names`,
@@ -18,11 +23,21 @@ class Theme {
         });
     }
 
-    async getHomeLoactionA() {
+    /**
+     * 获取首页第一个主题
+     *
+     * @returns {*}
+     */
+    getHomeLocationA() {
         return this.themes.find(t => t.name === Theme.locationA)
     }
 
-    async getHomeLocationE() {
+    /**
+     * 获取首页第五个主题
+     *
+     * @returns {*}
+     */
+    getHomeLocationE() {
         return this.themes.find(t => t.name === Theme.locationE)
     }
 }
