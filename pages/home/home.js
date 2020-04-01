@@ -32,7 +32,7 @@ Page({
      *
      * @returns {Promise<void>}
      */
-    async initData() {
+    initData: async function () {
         const theme = new Theme();
         await theme.getAllThemes();
         const themeA = theme.getHomeLocationA();
@@ -49,6 +49,9 @@ Page({
         const bannerB = await Banner.getHomeLocationB();
         const grid = await Category.getHomeLocationC();
         const activityD = await Activity.getHomeLocationD();
+
+        const bannerG = await Banner.getHomLocationG();
+        console.log(bannerG)
         this.setData({
             themeA,
             bannerB,
@@ -56,7 +59,8 @@ Page({
             activityD,
             themeE,
             themeESpu,
-            themeF
+            themeF,
+            bannerG
         })
     },
 
