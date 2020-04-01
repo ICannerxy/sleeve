@@ -41,6 +41,15 @@ class Theme {
         return this.themes.find(t => t.name === Theme.locationE)
     }
 
+    /**
+     * 获取首页第六个主题
+     *
+     * @returns {*}
+     */
+    getHomeLocationF() {
+        return this.themes.find(t => t.name === Theme.locationF)
+    }
+
     static getHomelocationESpu() {
         return Theme.getThemeSpuByName(Theme.locationE)
     }

@@ -26,8 +26,9 @@
         }
 
         .spu-text {
-            margin-top: 10rpx;
+            margin-top: 20rpx;
             font-size: 20rpx;
+            color: #666666;
         }
 
         .spu-container {
@@ -38,9 +39,9 @@
         }
 
         .price-unit {
-            font-size: 28rpx !important;
+            font-size: 26rpx !important;
         }
 
         .price-value {
-            font-size: 32rpx !important;
+            font-size:24rpx !important;
         }

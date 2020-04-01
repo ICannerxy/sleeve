@@ -37,6 +37,7 @@ Page({
         await theme.getAllThemes();
         const themeA = theme.getHomeLocationA();
         const themeE = theme.getHomeLocationE();
+        const themeF = theme.getHomeLocationF();
 
         let themeESpu = [];
         if (themeE.online) {
@@ -54,7 +55,8 @@ Page({
             grid,
             activityD,
             themeE,
-            themeESpu
+            themeESpu,
+            themeF
         })
     },
 
