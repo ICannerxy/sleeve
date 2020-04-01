@@ -40,6 +40,22 @@ class Theme {
     getHomeLocationE() {
         return this.themes.find(t => t.name === Theme.locationE)
     }
+
+    static getHomelocationESpu() {
+        return Theme.getThemeSpuByName(Theme.locationE)
+    }
+
+    /**
+     * 根据名称获取spu单个主题
+     *
+     * @param name
+     * @returns {Promise<any.data>}
+     */
+    static getThemeSpuByName(name) {
+        return Http.request({
+            url: `theme/name/${name}/with_spu`
+        })
+    }
 }
 
 export {

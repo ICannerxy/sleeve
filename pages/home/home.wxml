@@ -14,7 +14,17 @@
         </block>
     </swiper>
 
+    <!-- 六宫格 -->
     <s-category-grid grid="{{grid}}"></s-category-grid>
-    
+
+    <!-- 主题（优惠券） -->
     <image class="activity" src="{{activityD.entrance_img}}"></image>
+
+    <!-- 主题（最新上架） -->
+    <s-spu-scroll theme="{{themeE}}"
+                  spu-list="{{themeESpu}}"
+                  wx:if="{{themeE.online}}">
+    </s-spu-scroll>
+
+
 </view>
