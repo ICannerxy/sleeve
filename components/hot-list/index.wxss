@@ -1,11 +1,12 @@
-/* components/hot-list/index.wxss */
-        .container {
-            dispaly: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-top: 40rpx;
-            background-color: #ffffff;
-        }
+@import "../../wxss/sleeve.wxss"
+
+.container {
+    dispaly: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40rpx;
+    background-color: #ffffff;
+}
 
         .title {
             width: 690rpx;
