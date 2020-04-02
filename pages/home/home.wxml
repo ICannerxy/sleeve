@@ -31,4 +31,7 @@
 
     <!-- 热卖榜单 -->
     <s-hot-list banner="{{bannerG}}"></s-hot-list>
+
+    <!-- 时尚出街 -->
+    <image class="fashion" src="{{themeH.entrance_img}}"></image>
 </view>

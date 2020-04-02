@@ -51,6 +51,8 @@ Page({
         const activityD = await Activity.getHomeLocationD();
 
         const bannerG = await Banner.getHomLocationG();
+
+        const  themeH = theme.getHomeLocationH();
         console.log(bannerG)
         this.setData({
             themeA,
@@ -60,7 +62,8 @@ Page({
             themeE,
             themeESpu,
             themeF,
-            bannerG
+            bannerG,
+            themeH
         })
     },
 
