@@ -33,3 +33,16 @@
             width: 100%;
             height: 840rpx;
         }
+
+        .spu-bottom {
+            margin-top: 20rpx;
+            dispaly: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .title-spu-bottom {
+            width: 690rpx;
+            height: 70rpx;
+            margin-bottom: 38rpx;
+        }
