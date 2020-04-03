@@ -1,0 +1,33 @@
+/**
+ * @auth icanner
+ * @date 2020/4/3 2:12 下午
+ */
+function mainPrice(price, discountPrice) {
+    if (!discountPrice) {
+        return {
+            dispaly: true,
+            price: price
+        }
+    }
+    return {
+        price: discountPrice
+    }
+}
+
+function slashedPrice(price, discountPrice) {
+    if (discountPrice) {
+        return {
+            dispaly: true,
+            price: price
+        }
+    }
+    return {
+        display: false,
+        price: null
+    }
+}
+
+module.exports = {
+    mainPrice: mainPrice,
+    slashedPrice: slashedPrice
+}

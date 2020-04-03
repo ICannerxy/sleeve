@@ -39,6 +39,8 @@
             dispaly: flex;
             flex-direction: column;
             align-items: center;
+            padding-top: 30rpx;
+            background-color: #fffff;
         }
 
         .title-spu-bottom {
