@@ -1,42 +1,46 @@
-<view>
-    <!-- 主题 -->
-    <image class="top-theme" src="{{themeA.entrance_img}}"></image>
-    <!-- 轮播图 -->
-    <swiper class="swiper"
-            indicator-dots
-            indicator-active-color="#157658"
-            autoplay
-            circular>
-        <block wx:for="{{bannerB.items}}">
-            <swiper-item>
-                <image class="swiper" src="{{item.img}}"></image>
-            </swiper-item>
-        </block>
-    </swiper>
 
-    <!-- 六宫格 -->
-    <s-category-grid grid="{{grid}}"></s-category-grid>
+<l-loadmore show type="{{loadingType}}" endText="- 林间有风 风里有你 -">
+    <view slot="content" class="container">
+        <!-- 主题 -->
+        <image class="top-theme" src="{{themeA.entrance_img}}"></image>
+        <!-- 轮播图 -->
+        <swiper class="swiper"
+                indicator-dots
+                indicator-active-color="#157658"
+                autoplay
+                circular>
+            <block wx:for="{{bannerB.items}}" wx:key="index">
+                <swiper-item>
+                    <image class="swiper" src="{{item.img}}"></image>
+                </swiper-item>
+            </block>
+        </swiper>
 
-    <!-- 主题（优惠券） -->
-    <image class="activity" src="{{activityD.entrance_img}}"></image>
+        <!-- 六宫格 -->
+        <s-category-grid grid="{{grid}}"></s-category-grid>
 
-    <!-- 主题（每周上新） -->
-    <s-spu-scroll theme="{{themeE}}"
-                  spu-list="{{themeESpu}}"
-                  wx:if="{{themeE.online}}">
-    </s-spu-scroll>
+        <!-- 主题（优惠券） -->
+        <image class="activity" src="{{activityD.entrance_img}}"></image>
 
-    <!--风袖甄选-->
-    <image src="{{themeF.entrance_img}}" class="quality"></image>
+        <!-- 主题（每周上新） -->
+        <s-spu-scroll theme="{{themeE}}"
+                      spu-list="{{themeESpu}}"
+                      wx:if="{{themeE.online}}">
+        </s-spu-scroll>
 
-    <!-- 热卖榜单 -->
-    <s-hot-list banner="{{bannerG}}"></s-hot-list>
+        <!--风袖甄选-->
+        <image src="{{themeF.entrance_img}}" class="quality"></image>
 
-    <!-- 时尚出街 -->
-    <image class="fashion" src="{{themeH.entrance_img}}"></image>
+        <!-- 热卖榜单 -->
+        <s-hot-list banner="{{bannerG}}"></s-hot-list>
 
-    <view class="spu-bottom">
-        <image class="title-spu-bottom" src="../../imgs/home/title@interest.png"></image>
-        <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+        <!-- 时尚出街 -->
+        <image class="fashion" src="{{themeH.entrance_img}}"></image>
+
+        <!-- spu列表 -->
+        <view class="spu-bottom">
+            <image class="title-spu-bottom" src="../../imgs/home/title@interest.png"></image>
+            <l-water-flow generic:l-water-flow-item="s-spu-preview"></l-water-flow>
+        </view>
     </view>
-</view>
+</l-loadmore>

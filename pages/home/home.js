@@ -18,7 +18,8 @@ Page({
         activityD: null,
         themeE: null,
         themeESpu: [],
-        spuPagging: null
+        spuPagging: null,
+        loadingType: 'loading'
     },
 
     /**
@@ -96,7 +97,11 @@ Page({
             return
         }
         wx.lin.renderWaterFlow(data.items)
-
+        if (!data.moreData) {
+            this.setData({
+                loadingType: 'end'
+            })
+        }
     },
 
     /**
