@@ -1,0 +1,14 @@
+<!--components/relam/index.wxml-->
+<view class="container">
+    <view>
+        <image src=""></image>
+    </view>
+    <block wx:for="{{}}">
+        <s-fence></s-fence>
+    </block>
+    <view class="counter-container">
+        <!--        -->
+    </view>
+
+
+</view>

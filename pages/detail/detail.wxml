@@ -1,2 +1,2 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<s-relam spu="{{spu}}"></s-relam>
