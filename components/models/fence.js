@@ -2,11 +2,26 @@
  * @auth icanner
  * @date 2020/4/4 11:49 上午
  */
+import {Cell} from "./cell";
+
 class Fence {
-    valueTitles = []
+    cells = []
+    specs
+
+    constructor(specs) {
+        this.specs = specs
+    }
+
+    init() {
+        this.specs.forEach(spec => {
+            // this.pushValuetTitle(spec.value)
+            const cell = new Cell(spec)
+            this.cells.push(cell)
+        })
+    }
 
     pushValuetTitle(title) {
-        this.valueTitles.push(title)
+        this.cells.push(title)
     }
 }
 

@@ -37,13 +37,27 @@ class Matrix {
      * @param cb 需要回调的函数
      * @returns {*}
      */
-    forEach(cb) {
+    each(cb) {
         for (let j = 0; j < this.getColsNum(); j++) {
             for (let i = 0; i < this.getRowsNum(); i++) {
                 const element = this.m[i][j]
                 cb(element, i, j)
             }
         }
+    }
+
+    /**
+     * 矩阵转秩
+     */
+    transpose() {
+        const desArr = []
+        for (let j = 0; j < this.getColsNum(); j++) {
+            desArr[j] = []
+            for (let i = 0; i < this.getRowsNum(); i++) {
+                desArr[j][i] = this.m[i][j]
+            }
+        }
+        return desArr
     }
 }
 
