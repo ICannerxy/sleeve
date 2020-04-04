@@ -1,6 +1,6 @@
 <!--components/spu-preview/index.wxml-->
 <wxs src="../../wxs/price.wxs" module="p"></wxs>
-<view class="container">
+<view  data-pid="{{data.id}}" class="container" bind:tap="onItemTap">
     <!--  可以使用小程序提供的mode=widthFix实现动态宽度  -->
     <image bind:load="onImgLoad" style="width: {{w}}rpx; height: {{h}}rpx" src="{{data.img}}"></image>
     <view class="content-container">
