@@ -8,6 +8,10 @@ import {Fence as fence, Fence} from "./fence";
 class FenceGroup {
     spu
     skulist = []
+    /**
+     * 多组规格
+     */
+    fences
 
     constructor(spu) {
         this.spu = spu
@@ -48,7 +52,7 @@ class FenceGroup {
             fence.init()
             fences.push(fence)
         })
-
+        this.fences = fences;
     }
 
     _createFence(element) {

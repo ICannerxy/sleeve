@@ -22,7 +22,9 @@ Component({
         return
       }
       const fenceGroup = new FenceGroup(spu)
+      // 初始化规格列表
       fenceGroup.initFences()
+      this.bindInitData(fenceGroup)
     }
   },
 
@@ -30,6 +32,10 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    bindInitData(fenceGroup) {
+      this.setData({
+          fences: fenceGroup.fences
+      })
+    }
   }
 })
