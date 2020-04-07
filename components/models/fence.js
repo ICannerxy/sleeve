@@ -44,7 +44,7 @@ class Fence {
         this.specs.forEach(spec => {
             // some every
             const existed = this.cells.some(cell => {
-               return cell.value_id === spec.id
+                return cell.id === spec.value_id
             })
             if (existed) {
                 return
