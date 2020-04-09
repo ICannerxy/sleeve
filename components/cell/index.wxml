@@ -1,5 +1,5 @@
-<view class="container">
-    <view class="inner-container">
+<view class="container s-outer">
+    <view class="inner-container s-inner">
         <text>{{cell.title}}</text>
     </view>
 </view>
