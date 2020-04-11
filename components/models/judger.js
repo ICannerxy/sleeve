@@ -3,6 +3,7 @@
  * @date 2020/4/7 9:56 下午
  */
 import {SkuCode} from "./sku_code";
+import {CellStatus} from "../../core/enum";
 
 class Judger {
 
@@ -11,16 +12,31 @@ class Judger {
 
     constructor(fenceGroup) {
         this.fenceGroup = fenceGroup
-        this.initPathDict()
+        this._initPathDict()
     }
 
-    initPathDict() {
+    _initPathDict() {
         this.fenceGroup.spu.sku_list.forEach(sku => {
             const skuCode = new SkuCode(sku.code)
             this.pathDict = this.pathDict.concat(skuCode.totalSegments)
         })
         console.log(this.pathDict)
     }
+
+    judge(cell) {
+        this._changeCellStatus(cell)
+    }
+
+    _changeCellStatus(cell) {
+        if (cell.status === CellStatus.WAITING) {
+            cell.status = CellStatus.SELECTED
+        }
+        if (cell.status === CellStatus.SELECTED) {
+            cell.status = CellStatus.WAITING
+        }
+    }
+
+
 }
 
 export {
