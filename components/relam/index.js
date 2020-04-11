@@ -14,7 +14,7 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    judger: Object
   },
 
   observers: {
@@ -26,6 +26,7 @@ Component({
       // 初始化规格列表
       fenceGroup.initFences()
       const judger = new Judger(fenceGroup)
+      this.data.judger = judger
       this.bindInitData(fenceGroup)
     }
   },
@@ -37,6 +38,20 @@ Component({
     bindInitData(fenceGroup) {
       this.setData({
           fences: fenceGroup.fences
+      })
+    },
+
+    /**
+     * 点击cell改变状态
+     *
+     * @param event
+     */
+    onCellTap(event) {
+      const cell = event.detail.cell
+      const judger = this.data.judger
+      judger.judge(cell)
+      this.setData({
+        fences: judger.fenceGroup.fences
       })
     }
   }

@@ -20,7 +20,11 @@ Component({
   methods: {
     onTap(event) {
       this.triggerEvent('celltap', {
-
+          // 子组件数据传到父组件
+        cell: this.properties.cell
+      }, {
+        bubbles: true,
+        composed: true
       })
     }
   }
