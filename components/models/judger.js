@@ -23,10 +23,17 @@ class Judger {
         console.log(this.pathDict)
     }
 
-    judge(cell) {
+    judge({cell, x, y}) {
+        console.log(cell, x, y)
         this._changeCellStatus(cell)
     }
 
+    /**
+     * 改变cell状态
+     *
+     * @param cell
+     * @private
+     */
     _changeCellStatus(cell) {
         if (cell.status === CellStatus.WAITING) {
             cell.status = CellStatus.SELECTED

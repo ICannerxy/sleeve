@@ -25,8 +25,7 @@ Component({
       const fenceGroup = new FenceGroup(spu)
       // 初始化规格列表
       fenceGroup.initFences()
-      const judger = new Judger(fenceGroup)
-      this.data.judger = judger
+      this.data.judger = new Judger(fenceGroup)
       this.bindInitData(fenceGroup)
     }
   },
@@ -47,7 +46,7 @@ Component({
      * @param event
      */
     onCellTap(event) {
-      const cell = event.detail.cell
+      const cell = event.detail
       const judger = this.data.judger
       judger.judge(cell)
       this.setData({
