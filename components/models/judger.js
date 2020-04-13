@@ -23,7 +23,7 @@ class Judger {
         console.log(this.pathDict)
     }
 
-    judge({cell, x, y}) {
+    judge(cell) {
         console.log(cell, x, y)
         this._changeCellStatus(cell)
     }

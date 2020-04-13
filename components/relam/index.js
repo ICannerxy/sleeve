@@ -46,7 +46,7 @@ Component({
      * @param event
      */
     onCellTap(event) {
-      const cell = event.detail
+      const cell = event.detail.cell
       const judger = this.data.judger
       judger.judge(cell)
       this.setData({
